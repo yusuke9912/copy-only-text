@@ -1,22 +1,22 @@
-//拡張機能インストール時にコンテキストメニューを追加
-chrome.runtime.onInstalled.addListener(function (details) {
-	const menu = chrome.contextMenus.create({
-		id: "copyToClipBoard",
-		title: "値のみをコピーする",
-		contexts: ["selection"],
-	});
-});
+// //拡張機能インストール時にコンテキストメニューを追加
+// chrome.runtime.onInstalled.addListener(function (details) {
+// 	const menu = chrome.contextMenus.create({
+// 		id: "copyToClipBoard",
+// 		title: "値のみをコピーする",
+// 		contexts: ["selection"],
+// 	});
+// });
 
-//右クリックメニューからコピー
-  chrome.contextMenus.onClicked.addListener((info, tab) =>{
-	switch (info.menuItemId) {
-		case "copyToClipBoard":
-			chrome.scripting.executeScript({
-				target: { tabId: tab.id },
-				function: copyToClipBoard
-			});
-	}
-  });
+// //右クリックメニューからコピー
+//   chrome.contextMenus.onClicked.addListener((info, tab) =>{
+// 	switch (info.menuItemId) {
+// 		case "copyToClipBoard":
+// 			chrome.scripting.executeScript({
+// 				target: { tabId: tab.id },
+// 				function: copyToClipBoard
+// 			});
+// 	}
+//   });
 
 
   //拡張機能アイコンを押してコピー
