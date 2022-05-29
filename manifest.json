@@ -1,0 +1,10 @@
+{
+	"name": "値のみコピー",
+	"manifest_version": 3,
+	"version": "1.0",
+	"permissions": ["activeTab","scripting","contextMenus"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {}
+}
